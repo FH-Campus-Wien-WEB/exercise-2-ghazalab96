@@ -1,41 +1,157 @@
-@import url(base.css);
-
-h1 {
-  font-size: 200%;
-  margin: 8px 0px;
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+  margin: 24px;
+  background-color: #81aeca;
 }
 
-img {
-  border-radius: 12px;
+h1 {
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+h2:hover {
+  color: #2712de;
+}
+
+h3 {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 12px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 4px;
 }
 
 article {
-  background-color: lightgray;
-  border-radius: 16px;
-  padding: 16px;
-  margin: 2vw;
+  position: relative;
+  background-color: rgb(216, 228, 231);
+  max-width: 1000px;
+  margin: 24px auto;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.movie-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.movie-left {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.movie-right {
+  flex: 1;
+  min-width: 0;
+}
+
+img {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin-bottom: 16px;
+  border: 2px solid #d9d9d9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.50);
+  transition: 0.2s;
+}
+
+img:hover {
+  box-shadow: 0 8px 18px rgba(23, 25, 179, 0.50);
+}
+
+p {
+  margin: 8px 0;
+  line-height: 1.8;
 }
 
 span {
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 .genre {
+  background-color: #8fadf8;
   padding: 4px 8px;
-  border: solid black 1px;
-  border-radius: 6px;
-  background-color: darkgray;
+  border-radius: 8px;
+  margin: 4px;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.genre:hover {
+  background-color: #8e9cbe;
+}
+
+button {
+  font-size: 17px;
+  margin-top: 16px;
+  border-radius: 8px;
+  background-color: rgb(87, 194, 194);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 7px;
+  right: 30px;
+}
+
+button:hover {
+  background-color: #b4afe0;
+  transition: 0.2s;
+
+}
+
+.score-box {
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
   font-weight: bold;
+  display: inline-block;
+  margin-right: 18px;
 }
 
-input {
-  width: 100%;
+.imdb-box {
+  background-color: #ffe082;
 }
 
-select {
-  width: 100%;
+.metascore-box {
+  background-color: #b2dfdb;
 }
 
-textarea {
-  width: 100%;
+@media (max-width: 800px) {
+  .movie-layout {
+    flex-direction: column;
+  }
+
+  .movie-left {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  button {
+    position: static;
+    display: block;
+    margin-left: auto;
+    margin-top: 12px;
+  }
 }
